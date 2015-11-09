@@ -1,5 +1,4 @@
 from subprocess import check_output as getout
-from pyperclip import copy
 
 print("Getting ifconfig")
 
@@ -19,9 +18,5 @@ print("mask:"+mask)
 
 gtwy = ''.join([item for item in ''.join([item for item in ip if 'default' in item]).split() if '.' in item])
 print("gtwy:"+gtwy)
-
-print("Copying to Clipboard")
-
-copy(addr + '\t' + mask + '\t' + gtwy)
 
 print("DONE")
